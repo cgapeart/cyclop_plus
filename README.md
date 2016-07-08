@@ -1,4 +1,34 @@
-#CYCLOP+ v1.2
+#CYCLOP+ v1.?
+#CGAP - Plans:
+From what I can tell, the vRx in the cyclops does receive and demodulate audio, but the audio out pin is not connected.
+So, I want to enable the audio out and possible add volume control.
+
+So far, it appears there is only one audio channel out on the module.
+
+## Primary Reference
+http://www.ndatasheet.com/datasheet-frame/300/mdownload.php?id=785220
+## Intersting Registers
+-0x02 - Synthesizer register C (audio AGC control)
+-0x06 - audio 6M demodulator control register
+-0x07 - audio 6m5 demodulator control register
+-0x0a - Powerdown control register (turn on/off audio amp)
+
+##Development Plan
+###Connect audio out
+Need somewhere to send the signal, and I want to find out if any signal is present.  The pin is marked A01 on the board, and while I am wireing that up, I also want to add a video out, so I can connect the goggles to a second screen or DVR.
+
+I took off the little side plate, and it looks to me like there are two perfect spots to add in a video out, audio out, and with a little hacking, maybe even a programming header.
+
+https://www.youtube.com/watch?v=WWa8uCDC1Q4
+says that video feed can be pulled off between the module and the screen.
+
+###Read default register settings
+Gotta find out what is turned on or off the start with.
+###Get audio out working
+pretty straight forward there
+###Add button push options to at least enable/disable audio.
+
+
 ###Introduction and Goals
 The first goal of this project (CYCLOP+) is to add the ability to manually select channels using only the standard button on the receiver of the Quanum Cyclops.
 The second goal is to add support for connecting an OLED display to the receiver so that more information can be presented.
