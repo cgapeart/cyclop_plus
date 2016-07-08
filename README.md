@@ -3,7 +3,7 @@
 From what I can tell, the vRx in the cyclops does receive and demodulate audio, but the audio out pin is not connected.
 So, I want to enable the audio out and possible add volume control.
 
-So far, it appears there is only one audio channel out on the module.
+So far, it appears there is only one audio channel out on the module.  However, there are 2 demodulators (the 6M and 6.5M audio demodulators).  So, need to see if there is any way to get that signal off the board.
 
 ## Primary Reference
 http://www.ndatasheet.com/datasheet-frame/300/mdownload.php?id=785220
